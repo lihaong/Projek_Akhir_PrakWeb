@@ -1,5 +1,6 @@
 <?php
-include '/Applications/XAMPP/xamppfiles/htdocs/projek/functions.php';
+include '../functions.php';
+
 if (isset($_POST["register"])) {
   if (registrasi($_POST) > 0) {
     echo '<script>alert("Berhasil menambahkan User")</script>';
