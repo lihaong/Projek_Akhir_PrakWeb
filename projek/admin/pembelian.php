@@ -1,8 +1,10 @@
 <?php
+include '../functions.php';
+include '../asset.php';
+
 session_start();
 error_reporting(0);
-include '/Applications/XAMPP/xamppfiles/htdocs/projek/functions.php';
-include '../asset.php';
+
 $data = query("SELECT * FROM pembelian");
 $tabel = 'pembelian';
 $col = 'Id_pembelian';
