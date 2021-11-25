@@ -1,9 +1,10 @@
 <?php
-include '../functions.php';
-include '../asset.php';
 
 session_start();
 error_reporting(0);
+
+include '../functions.php';
+include '../asset.php';
 
 $data = query("SELECT * FROM produk");
 $tabel = "produk";

@@ -1,6 +1,8 @@
 <?php
 session_start();
-include '/Applications/XAMPP/xamppfiles/htdocs/projek/functions.php';
+error_reporting(0);
+
+include '../functions.php';
 include '../asset.php';
 
 $data = query("SELECT * FROM produk where Code_Kategory = 'GPU'");

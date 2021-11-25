@@ -1,11 +1,9 @@
-<!DOCTYPE html>
 <?php
+session_start();
+error_reporting(0);
 
 include '../functions.php';
 // diganti sesuai lokasi functions.php
-
-session_start();
-error_reporting(0);
 
 
 if (isset($_POST['login'])) {
@@ -16,6 +14,7 @@ if (isset($_POST['login'])) {
 }
 ?>
 
+<!DOCTYPE html>
 <html>
 
 <head>
