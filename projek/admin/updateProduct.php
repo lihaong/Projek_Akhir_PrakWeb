@@ -1,5 +1,6 @@
 <?php
-include '/Applications/XAMPP/xamppfiles/htdocs/projek/functions.php';
+
+include '../functions.php';
 
 if ($_GET['id'] > 0) {
     $tempUser = $_GET['id'];
