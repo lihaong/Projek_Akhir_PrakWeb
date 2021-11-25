@@ -27,12 +27,7 @@
           <div class="img-wrapper">
             <img style="max-width: 200px" src="./images/rog-logo@3x.png" alt="logo" />
           </div>
-
-          <button class="hamburger" id="hamburger" onclick="hamburger()">
-            <img class="open" src="./images/icon-hamburger.svg" alt="icon-hamburger" />
-            <img class="close" src="./images/icon-close.svg" alt="icon-close" />
-          </button>
-
+          
           <ul id="menu" class="menu">
             <li>
               <a class="btn" href="product/GPU.php">Graphic Cards</a>

@@ -1,12 +1,3 @@
-function hamburger(){
-	const hamburger = document.getElementById('hamburger');
-	const menu = document.getElementById('menu');
-
-	hamburger.addEventListener('click', () => {
-		hamburger.classList.toggle('show');
-		menu.classList.toggle('show');
-	});
-}
 
 function myFunction(){
 	var x = document.getElementById("txt-password");

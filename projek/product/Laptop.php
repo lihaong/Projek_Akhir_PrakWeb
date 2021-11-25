@@ -49,11 +49,6 @@ addItem();
           </a>
         </div>
 
-        <button class="hamburger" id="hamburger">
-          <img class="open" src="/images/icon-hamburger.svg" alt="icon-hamburger" />
-          <img class="close" src="/images/icon-close.svg" alt="icon-close" />
-        </button>
-
         <ul id="menu" class="menu">
           <li>
             <a class="btn" href="http://localhost/projek/product/GPU.php">Grhapic Cards</a>
