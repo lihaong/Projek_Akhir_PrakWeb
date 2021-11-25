@@ -26,12 +26,11 @@ function registrasi($data)
     $city = htmlspecialchars($data["city"]);
     $districts = htmlspecialchars($data["districts"]);
     $phone = htmlspecialchars($data["phone"]);
+    $zip =  htmlspecialchars($data["zip"]);
 
     $result = mysqli_query($conn, "SELECT Email FROM pelanggan WHERE Email = '$email'");
 
-    if (
-        mysqli_fetch_assoc($result)
-    ) {
+    if (mysqli_fetch_assoc($result)) {
         echo "<script>
 				alert('Email telah terdaftar!')
 		      </script>";
@@ -43,7 +42,7 @@ function registrasi($data)
     }
     $pass = password_hash($pass1, PASSWORD_DEFAULT);
 
-    $query = "INSERT INTO pelanggan (Email,Password,Nama,Street,Country,City,District,Phone) values ('$email','$pass','$nama','$street','$country','$city','$districts','$phone')";
+    $query = "INSERT INTO pelanggan (Email,Password,Nama,Street,Country,City,District,zip,Phone) values ('$email','$pass','$nama','$street','$country','$city','$districts','$zip','$phone')";
     mysqli_query($conn, $query);
 
     return mysqli_affected_rows($conn);
