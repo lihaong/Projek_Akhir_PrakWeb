@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <?php
-session_start();
-// diganti sesuai device
-include '/Applications/XAMPP/xamppfiles/htdocs/projek/functions.php';
 
+include '../functions.php';
+// diganti sesuai lokasi functions.php
+
+session_start();
 error_reporting(0);
 
 
