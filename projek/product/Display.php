@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '/Applications/XAMPP/xamppfiles/htdocs/projek/functions.php';
+include '../functions.php';
 include '../asset.php';
 
 $data = query("SELECT * FROM produk where Code_Kategory = 'Displays'");
