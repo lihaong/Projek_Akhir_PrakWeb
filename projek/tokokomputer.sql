@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 26, 2021 at 01:37 AM
+-- Generation Time: Dec 01, 2021 at 04:03 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -66,9 +66,8 @@ CREATE TABLE `pelanggan` (
 
 INSERT INTO `pelanggan` (`Id_Pelanggan`, `Email`, `Password`, `Nama`, `Street`, `Country`, `City`, `District`, `zip`, `Phone`) VALUES
 (36, 'admin@gmail.com', '$2y$10$uhlmBhKq9a.yWeNfR.5Tj.1AH2HU6vEc5KIOgkSN6B95Px4aLagaG', 'Admin Lihaong', 'Jl. Ikhlas 32', 'Indonesia', 'Magelang', 'Windusari', '56152', '082313091907'),
-(43, 'Gilang@gmail.com', '$2y$10$pnh8dqkBmBy74taBpybFq.WhSSI7zIGhU8ziHmMNH/J/PmzOc9q8S', 'Gilang Yoenal', 'Jl. Damai', 'Indonesia', 'Yogyakarta', 'Sleman', '56199', '088980069721'),
-(44, '123200054@gmail.com', '$2y$10$PrxrEGUGWvz.urJNjOr0/eOuUTM1Jbbmc9Ymw/6./g690s6K/VJFe', 'Muhammad Fajar Andikha', 'Jl. Ikhlas 32', 'Indonesia', 'Magelang', 'Secang', '56195', '082313091907'),
-(45, '99@gmail.com', '$2y$10$zMa8fmhfq.3XsFlv0QG.IOpE4JartE4Xs6J3FKENSqj1yAbxv5uuy', 'Mahmud', 'Jl. Palagan', 'Indonesia', 'Yogyakarta', 'Sleman', '343443', '21312312321');
+(46, 'gilang@gmail.com', '$2y$10$jOVkxsT4ogvQdU4B/KS.IuBETTzNAixTEUo0A2Ie9bgdkjdyHWaiC', 'Gilang Yoenal M', 'banjarasari', 'Indonesia', 'magelang', 'Windusari', '56152', '082313091907'),
+(52, 'fajar@gmail.com', '$2y$10$T5t.wht2J6wI0QTXavJub.N9QeQO0PTECfEQQwgzQAokN76OCJOci', 'Fajar Andikha', 'banjarasari', 'Indonesia', 'magelang', 'Windusari', '56152', '082313091907');
 
 -- --------------------------------------------------------
 
@@ -83,13 +82,6 @@ CREATE TABLE `pembelian` (
   `Tot_Barang` int(40) NOT NULL,
   `DaftarBarang` varchar(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `pembelian`
---
-
-INSERT INTO `pembelian` (`Id_pembelian`, `Id_Pelanggan`, `Tot_Harga`, `Tot_Barang`, `DaftarBarang`) VALUES
-(339, 45, 3100, 2, '32 33');
 
 -- --------------------------------------------------------
 
@@ -170,7 +162,7 @@ ALTER TABLE `produk`
 -- AUTO_INCREMENT for table `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  MODIFY `Id_Pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `Id_Pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `pembelian`
