@@ -1,13 +1,14 @@
 <?php
-session_start();
-error_reporting(0);
-
 include '../functions.php';
-
+$id = $_GET['id'];
 if (isset($_POST["register"])) {
   if (registrasi($_POST) > 0) {
     echo '<script>alert("Berhasil menambahkan User")</script>';
-    header("location: ../login/login.php");
+    if ($id === 'Admin') {
+      header("location: ../admin");
+    } else {
+      header("location: ../login/login.php");
+    }
   } else {
     echo '<script>alert("Gagal menambahkan User")</script>';
     echo mysqli_error($conn);

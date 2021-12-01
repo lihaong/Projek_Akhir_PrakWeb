@@ -1,10 +1,8 @@
 <?php
 session_start();
 error_reporting(0);
-include '../functions.php';
+include '/Applications/XAMPP/xamppfiles/htdocs/projek/functions.php';
 include '../asset.php';
-
-
 $data = query("SELECT * FROM pelanggan");
 $tabel = 'pelanggan';
 $col = 'Id_Pelanggan';
@@ -118,7 +116,7 @@ if (isset($_POST["update"])) {
         <?php $i++; ?>
       <?php endforeach; ?>
     </table>
-    <a href="../register/register.php" style="margin-bottom:100px;text-decoration: none;" class="login btn">
+    <a href="../register/register.php?id=Admin" style="margin-bottom:100px;text-decoration: none;" class="login btn">
       Insert Data
     </a>
   </section>
