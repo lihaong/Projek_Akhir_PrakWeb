@@ -1,12 +1,19 @@
 <?php
-session_start();
-error_reporting(0);
-
-include '../functions.php';
+include '/Applications/XAMPP/xamppfiles/htdocs/projek/functions.php';
 
 if ($_GET['id'] > 0) {
     $tempUser = $_GET['id'];
 }
+$data = query("SELECT * FROM produk where Code_Produk = '$tempUser'");
+foreach ($data as $row) :
+    $tempProductID = $row['Code_Produk'];
+    $tempKategori = $row['Code_Kategory'];
+    $tempHarga = $row['Harga'];
+    $tempNama = $row['Nama_Produk'];
+    $tempDeskripsi = $row['Deskripsi'];
+    $tempStock = $row['Stok_Produk'];
+    $tempGambar = $row['Gambar'];
+endforeach;
 if (isset($_POST["Update"])) {
     if (updateProduct($_POST, $tempUser) > 0) {
         echo " <script> alert('Data berhasil diupdate!'); </script> ";
@@ -44,7 +51,7 @@ if (isset($_POST["Update"])) {
                 <div class="field-group flex">
                     <div class="separate">
                         <label class="label" for="txt-barang">Nama Barang</label>
-                        <input class="input" type="text" id="txt-barang" name="namaBarang" placeholder="NVIDIA RTX 3090 TI" required />
+                        <input class="input" type="text" id="txt-barang" name="namaBarang" placeholder="<?php echo $tempNama ?>" required />
                     </div>
                     <div class="separate">
                         <label class="label" for="txt-kategori">Kategori</label>
@@ -67,7 +74,7 @@ if (isset($_POST["Update"])) {
                 <div class="field-group flex">
                     <div class="separate">
                         <label class="label" for="txt-stock">Stock</label>
-                        <input class="quantity input" type="number" id="txt-stock" name="stock" placeholder="Enter Stock" required />
+                        <input class="quantity input" type="number" id="txt-stock" name="stock" placeholder="<?php echo $tempStock ?>" required />
                     </div>
                     <div class="separate">
                         <label class="label" for="file">Add File</label>
@@ -77,12 +84,12 @@ if (isset($_POST["Update"])) {
                 <div class="field-group flex">
                     <div class="separate">
                         <label class="label" for="harga">Harga Barang</label>
-                        <input class="input" type="number" id="harga" name="harga" min="0.1" step="0.1" max="10000" placeholder="$30.0" required />
+                        <input class="input" type="number" id="harga" name="harga" min="0.1" step="0.1" max="10000" placeholder=" $ <?php echo $tempHarga ?>" required />
                     </div>
                 </div>
                 <div class="field-group flex" style="flex-direction: column">
                     <label class="label" for="txt-desk">Deskripsi Barang</label>
-                    <textarea class="input" type="text" id="txt-desk" name="deskripsi" placeholder="NVIDIA RTX 3090 TI" required style="
+                    <textarea class="input" type="text" id="txt-desk" name="deskripsi" placeholder="<?php echo $tempDeskripsi ?>" required style="
               max-width: 840px;
               min-height: 200px;
             "></textarea>

@@ -1,6 +1,11 @@
 <?php
 include '../functions.php';
 $id = $_GET['id'];
+if ($id === 'Admin') {
+  $ref = '../admin/index.php';
+} else {
+  $ref = '../login/login.php';
+}
 if (isset($_POST["register"])) {
   if (registrasi($_POST) > 0) {
     echo '<script>alert("Berhasil menambahkan User")</script>';
@@ -121,7 +126,7 @@ if (isset($_POST["register"])) {
         </div>
       </form>
       <div class="bg-white" style="border: none; ">
-        <a style="text-decoration:none; color:red;" href="../login/login.php" class="link-register">Cancel</a>
+        <a style="text-decoration:none; color:red;" href="<?php echo $ref ?>" class="link-register">Cancel</a>
       </div>
     </div>
   </div>
