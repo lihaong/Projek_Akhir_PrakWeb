@@ -25,7 +25,7 @@ if (isset($_POST["Update"])) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Update Product Account</title>
+    <title>Update Product</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../images/logo.png" />
 
     <link rel="stylesheet" href="../register/register.css" type="text/css" />
