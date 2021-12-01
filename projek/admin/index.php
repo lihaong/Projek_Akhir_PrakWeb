@@ -118,7 +118,7 @@ if (isset($_POST["update"])) {
         <?php $i++; ?>
       <?php endforeach; ?>
     </table>
-    <a href="updateUser.php" style="margin-bottom:100px;text-decoration: none;" class="login btn">
+    <a href="../register/register.php" style="margin-bottom:100px;text-decoration: none;" class="login btn">
       Insert Data
     </a>
   </section>

@@ -25,7 +25,7 @@ if (isset($_POST["Update"])) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Update User Account</title>
+    <title>Update Product Account</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../images/logo.png" />
 
     <link rel="stylesheet" href="../register/register.css" type="text/css" />
@@ -40,7 +40,7 @@ if (isset($_POST["Update"])) {
     <div class="content-body">
         <div class="form-wrapper">
             <form class="bg-white" method="POST">
-                <h1 class="text-title">Add Stock</h1>
+                <h1 class="text-title">Update Stock</h1>
                 <div class="field-group flex">
                     <div class="separate">
                         <label class="label" for="txt-barang">Nama Barang</label>
