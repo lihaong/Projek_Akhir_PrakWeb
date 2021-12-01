@@ -168,7 +168,9 @@ function addItem()
         if (isset($_SESSION['cart'])) {
             //
             $item_array_id = array_column($_SESSION['cart'], "product_id");
+            // memasukkan product_id yang berada di dalam $_SESSION['cart'] menajadi sebuah array
             if (in_array($_POST['product_id'], $item_array_id)) {
+                // mencari apakah ada array tersebut
                 echo "
       <script>
       alert('Data telah di keranjang!');

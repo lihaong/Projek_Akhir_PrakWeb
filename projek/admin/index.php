@@ -3,6 +3,9 @@ session_start();
 error_reporting(0);
 include '/Applications/XAMPP/xamppfiles/htdocs/projek/functions.php';
 include '../asset.php';
+if ($_SESSION['login'] != 'Admin') {
+  header("Location: ../");
+}
 $data = query("SELECT * FROM pelanggan");
 $tabel = 'pelanggan';
 $col = 'Id_Pelanggan';
